@@ -1,0 +1,602 @@
+{
+ "sku": "QH-MY7R-JRZ6",
+ "summaries": [
+  {
+   "marketplaceId": "ATVPDKIKX0DER",
+   "asin": "B0HMQ65YGY",
+   "productType": "BLANKET",
+   "conditionType": "new_new",
+   "status": [
+    "DISCOVERABLE",
+    "BUYABLE"
+   ],
+   "itemName": "EAOEIHD Heated Shawl Wraps for Women, USB Wearable Blanket with 3 Heat Settings (Beige)",
+   "createdDate": "2026-10-12T02:24:21.863Z",
+   "lastUpdatedDate": "2026-10-19T08:04:38.110Z",
+   "mainImage": {
+    "link": "https://m.media-amazon.com/images/I/41j3BA9yGQL.jpg",
+    "height": 500,
+    "width": 500
+   }
+  }
+ ],
+ "productTypes": [
+  {
+   "marketplaceId": "ATVPDKIKX0DER",
+   "productType": "BLANKET"
+  }
+ ],
+ "relationships": [
+  {
+   "marketplaceId": "ATVPDKIKX0DER",
+   "relationships": [
+    {
+     "parentSkus": [
+      "2Y-IVY8-39G1"
+     ],
+     "type": "VARIATION",
+     "variationTheme": {
+      "attributes": [
+       "color"
+      ],
+      "theme": "COLOR"
+     }
+    }
+   ]
+  }
+ ],
+ "attributes": {
+  "included_components": [
+   {
+    "language_tag": "en_US",
+    "value": "1 X Heated Shawl Wrap",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "blanket_form": [
+   {
+    "value": "throw_blanket",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "skip_offer": [
+   {
+    "value": false,
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "fulfillment_availability": [
+   {
+    "fulfillment_channel_code": "DEFAULT",
+    "quantity": 999,
+    "lead_time_to_ship_max_days": 2
+   }
+  ],
+  "required_product_compliance_certificate": [
+   {
+    "value": "Not Applicable",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "model_name": [
+   {
+    "language_tag": "en_US",
+    "value": "Heated Shawl Wrap 2027",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "age_range_description": [
+   {
+    "language_tag": "en_US",
+    "value": "Adult",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "bullet_point": [
+   {
+    "language_tag": "en_US",
+    "value": "【Hands Free Zip Front Design】Unlike loose throw blankets that slide off, the front zipper on this hooded heated shawl keeps it in place while freeing both hands for reading or working",
+    "marketplace_id": "ATVPDKIKX0DER"
+   },
+   {
+    "language_tag": "en_US",
+    "value": "【Three Adjustable Warmth Levels】Simply press one button on this heated wrap to switch between three temperature levels for personalized comfort during chilly mornings or relaxing evenings",
+    "marketplace_id": "ATVPDKIKX0DER"
+   },
+   {
+    "language_tag": "en_US",
+    "value": "【USB Powered Portable Design】Plug this cordless heated blanket into any USB outlet or power bank for convenient use at home in the office or while traveling",
+    "marketplace_id": "ATVPDKIKX0DER"
+   },
+   {
+    "language_tag": "en_US",
+    "value": "【Soft Double Sided Fabric】The knitted outer surface gives your heated wearable blanket a refined look while the plush lining delivers cozy warmth around your shoulders for all day comfort",
+    "marketplace_id": "ATVPDKIKX0DER"
+   },
+   {
+    "language_tag": "en_US",
+    "value": "【Compact Travel Friendly Gift】Folds neatly for commuting, storage and trips, making this heated cape an ideal winter gift choice for family and friends who feel the cold",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "product_description": [
+   {
+    "language_tag": "en_US",
+    "value": "<p><strong>Tired of blankets that slide off every time you reach for your phone or a cup of tea? This heated shawl wraps comfortably around your shoulders and stays put with a smart zip front design, delivering soothing warmth exactly where you need it most.</strong></p>\n<p><strong><br></strong></p>\n<p><strong>Why do we choose this product?</strong></p>\n<ol>\n    <li>Hands free zip front keeps the shawl securely in place</li>\n    <li>Three temperature levels for personalized comfort</li>\n    <li>USB powered design works with portable power banks</li>\n    <li>Soft double sided knit with plush inner lining</li>\n    <li>Lightweight and foldable for easy travel and storage</li>\n    <li>One button control for simple operation by anyone</li>\n    <li>Stylish cape shape suitable for home and office use</li>\n</ol>\n<p><br></p>\n<p><strong>Product Information:</strong></p>\n<ul>\n    <li>Product Name: Heated Shawl Wraps for Women</li>\n    <li>Material: Textured Knit Outer Layer with Plush Inner Lining</li>\n    <li>Available Colors: Red, White, Khaki, Green</li>\n    <li>Size: 150 × 80 cm (59.06 × 31.50 in)</li>\n    <li>Power: DC 5V USB, 10W Input</li>\n    <li>Heat Settings: Approximately 95°F, 113°F, 131°F</li>\n</ul>\n<p><br></p>\n<p><strong>Package Includes:</strong></p>\n<ul>\n    <li>1 x Heated Shawl Wrap</li>\n</ul>\n<p><br></p>\n<p><strong>Notes:</strong></p>\n<ol>\n    <li>Due to manual measurements, please allow slight measurement deviations.</li>\n    <li>Due to the different display and lighting effects, the actual color of the item may be slightly different from the color displayed on the picture.</li>\n    <li>Do not use this product while sleeping or unattended. Keep away from water and liquids to avoid electrical hazards.</li>\n    <li>If you have any questions or issues during use, please reach out to us via Amazon messages. We will assist you as soon as possible.</li>\n</ol>",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "brand": [
+   {
+    "language_tag": "en_US",
+    "value": "EAOEIHD",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "generic_keyword": [
+   {
+    "language_tag": "en_US",
+    "value": "heated shawl wraps for women heated shawl heated blanket heated cape wearable heated blanket heat cape heated cape for women heated wearable blanket heated wraps for women heated wrap heat wrap blanket shawl heated throw blanket cordless heated blanket portable heated blanket heated scarf usb heated shawl",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "seasons": [
+   {
+    "language_tag": "en_US",
+    "value": "Fall",
+    "marketplace_id": "ATVPDKIKX0DER"
+   },
+   {
+    "language_tag": "en_US",
+    "value": "Winter",
+    "marketplace_id": "ATVPDKIKX0DER"
+   },
+   {
+    "language_tag": "en_US",
+    "value": "Spring",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "fill_material": [
+   {
+    "language_tag": "en_US",
+    "value": "Plush",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "country_of_origin": [
+   {
+    "value": "CN",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "fabric_type": [
+   {
+    "language_tag": "en_US",
+    "value": "Polyfluoroethylene",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "thermal_performance_description": [
+   {
+    "language_tag": "en_US",
+    "value": "Powered By Usb Dc 5v 10w Input For Consistent And Personalized Warmth Around The Shoulders",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "item_type_keyword": [
+   {
+    "value": "electric-blankets",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "condition_type": [
+   {
+    "value": "new_new",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "number_of_items": [
+   {
+    "value": 1,
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "recommended_uses_for_product": [
+   {
+    "language_tag": "en_US",
+    "value": "Home Use",
+    "marketplace_id": "ATVPDKIKX0DER"
+   },
+   {
+    "language_tag": "en_US",
+    "value": "Office Use",
+    "marketplace_id": "ATVPDKIKX0DER"
+   },
+   {
+    "language_tag": "en_US",
+    "value": "Travel",
+    "marketplace_id": "ATVPDKIKX0DER"
+   },
+   {
+    "language_tag": "en_US",
+    "value": "Commuting",
+    "marketplace_id": "ATVPDKIKX0DER"
+   },
+   {
+    "language_tag": "en_US",
+    "value": "Reading",
+    "marketplace_id": "ATVPDKIKX0DER"
+   },
+   {
+    "language_tag": "en_US",
+    "value": "Relaxing",
+    "marketplace_id": "ATVPDKIKX0DER"
+   },
+   {
+    "language_tag": "en_US",
+    "value": "Gifting",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "item_package_dimensions": [
+   {
+    "height": {
+     "unit": "inches",
+     "value": 4.0
+    },
+    "length": {
+     "unit": "inches",
+     "value": 1.0
+    },
+    "width": {
+     "unit": "inches",
+     "value": 12.0
+    },
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "size": [
+   {
+    "language_tag": "en_US",
+    "value": "59.06 X 31.50 Inches",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "item_thickness": [
+   {
+    "decimal_value": 0.5,
+    "unit": "inches",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "style": [
+   {
+    "language_tag": "en_US",
+    "value": "Cape Shawl Wrap",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "embellishment_feature": [
+   {
+    "language_tag": "en_US",
+    "value": "Front Zipper Closure",
+    "marketplace_id": "ATVPDKIKX0DER"
+   },
+   {
+    "language_tag": "en_US",
+    "value": "Power Button Control",
+    "marketplace_id": "ATVPDKIKX0DER"
+   },
+   {
+    "language_tag": "en_US",
+    "value": "Plush Inner Lining",
+    "marketplace_id": "ATVPDKIKX0DER"
+   },
+   {
+    "language_tag": "en_US",
+    "value": "Waffle Knit Outer Texture",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "title_differentiation": [
+   {
+    "language_tag": "en_US",
+    "value": "Soft Textured Knit with Plush Lining, USB Powered Comfort for Home Office Travel, Portable Everyday Design for Women",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "color": [
+   {
+    "language_tag": "en_US",
+    "value": "Beige",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "variation_theme": [
+   {
+    "name": "COLOR"
+   }
+  ],
+  "weave_type": [
+   {
+    "language_tag": "en_US",
+    "value": "Waffle Knit",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "pattern": [
+   {
+    "language_tag": "en_US",
+    "value": "Waffle Knit Texture",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "item_package_weight": [
+   {
+    "unit": "pounds",
+    "value": 1.5,
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "recommended_user_type": [
+   {
+    "language_tag": "en_US",
+    "value": "Women",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "item_length_width": [
+   {
+    "length": {
+     "unit": "inches",
+     "value": 50.0
+    },
+    "width": {
+     "unit": "inches",
+     "value": 70.0
+    },
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "manufacturer": [
+   {
+    "language_tag": "en_US",
+    "value": "Generic",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "number_of_boxes": [
+   {
+    "value": 1,
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "theme": [
+   {
+    "language_tag": "en_US",
+    "value": "Anime",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "model_number": [
+   {
+    "value": "2027",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "supplier_declared_dg_hz_regulation": [
+   {
+    "value": "not_applicable",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "number_of_packs": [
+   {
+    "value": 1,
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "supplier_declared_has_product_identifier_exemption": [
+   {
+    "value": true,
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "special_feature": [
+   {
+    "language_tag": "en_US",
+    "value": "Corded Electric",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "merchant_shipping_group": [
+   {
+    "value": "a08cfb00-f40d-4cbd-a231-51d5f48f37d9",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "item_name": [
+   {
+    "language_tag": "en_US",
+    "value": "Heated Shawl Wraps for Women, USB Wearable Blanket with 3 Heat Settings (Beige)",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "list_price": [
+   {
+    "currency": "USD",
+    "value": 90.0,
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "thread": [
+   {
+    "count": [
+     {
+      "value": 1
+     }
+    ],
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "batteries_required": [
+   {
+    "value": false,
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "material": [
+   {
+    "language_tag": "en_US",
+    "value": "Textured Knit",
+    "marketplace_id": "ATVPDKIKX0DER"
+   },
+   {
+    "language_tag": "en_US",
+    "value": "Plush Fleece Lining",
+    "marketplace_id": "ATVPDKIKX0DER"
+   },
+   {
+    "language_tag": "en_US",
+    "value": "Polyester",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "care_instructions": [
+   {
+    "language_tag": "en_US",
+    "value": "Do Not Use While Sleeping Or Unattended",
+    "marketplace_id": "ATVPDKIKX0DER"
+   },
+   {
+    "language_tag": "en_US",
+    "value": "Keep Away From Water And Liquids",
+    "marketplace_id": "ATVPDKIKX0DER"
+   },
+   {
+    "language_tag": "en_US",
+    "value": "Hand Wash Or Spot Clean Recommended",
+    "marketplace_id": "ATVPDKIKX0DER"
+   },
+   {
+    "language_tag": "en_US",
+    "value": "Do Not Bleach",
+    "marketplace_id": "ATVPDKIKX0DER"
+   },
+   {
+    "language_tag": "en_US",
+    "value": "Do Not Tumble Dry On High Heat",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "unit_count": [
+   {
+    "type": {
+     "language_tag": "en_US",
+     "value": "Count"
+    },
+    "value": 1.0,
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "other_product_image_locator_4": [
+   {
+    "media_location": "https://m.media-amazon.com/images/I/81umsree4uL.jpg",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "other_product_image_locator_2": [
+   {
+    "media_location": "https://m.media-amazon.com/images/I/913kECB6CjL.jpg",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "main_product_image_locator": [
+   {
+    "media_location": "https://m.media-amazon.com/images/I/91pzIrmLtML.jpg",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "other_product_image_locator_3": [
+   {
+    "media_location": "https://m.media-amazon.com/images/I/81oUsFkp2SL.jpg",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "other_product_image_locator_8": [
+   {
+    "media_location": "https://m.media-amazon.com/images/I/81GfmRoofiL.jpg",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "other_product_image_locator_1": [
+   {
+    "media_location": "https://m.media-amazon.com/images/I/91Ssg2xLe3L.jpg",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "other_product_image_locator_6": [
+   {
+    "media_location": "https://m.media-amazon.com/images/I/81FxmvgGk8L.jpg",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "other_product_image_locator_7": [
+   {
+    "media_location": "https://m.media-amazon.com/images/I/81bTOi0469L.jpg",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "other_product_image_locator_5": [
+   {
+    "media_location": "https://m.media-amazon.com/images/I/81iAq6OBg6L.jpg",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "purchasable_offer": [
+   {
+    "currency": "USD",
+    "audience": "ALL",
+    "our_price": [
+     {
+      "schedule": [
+       {
+        "value_with_tax": 35.99
+       }
+      ]
+     }
+    ],
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "parentage_level": [
+   {
+    "marketplace_id": "ATVPDKIKX0DER",
+    "value": "child"
+   }
+  ],
+  "child_parent_sku_relationship": [
+   {
+    "marketplace_id": "ATVPDKIKX0DER",
+    "child_relationship_type": "variation",
+    "parent_sku": "2Y-IVY8-39G1"
+   }
+  ]
+ },
+ "offers": [
+  {
+   "marketplaceId": "ATVPDKIKX0DER",
+   "offerType": "B2C",
+   "price": {
+    "currency": "USD",
+    "currencyCode": "USD",
+    "amount": "35.99"
+   },
+   "audience": {
+    "value": "ALL",
+    "displayName": "Sell on Amazon"
+   }
+  }
+ ]
+}
