@@ -1,0 +1,24 @@
+# ===== 密钥，绝对不进仓库 =====
+config/image_host.json
+config/*.secret.json
+*.token
+.env
+.env.*
+
+# ===== 运行产物 =====
+_image_urls.json
+_listing_*.json
+_product_*.json
+_result_*.json
+_poll_*.json
+_dm*.json
+*.log
+logs/
+__pycache__/
+*.pyc
+.DS_Store
+
+# ===== 临时 =====
+_imgs_*/
+_schema_*.json
+_pt_*.json
