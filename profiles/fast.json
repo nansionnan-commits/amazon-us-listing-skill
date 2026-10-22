@@ -1,0 +1,25 @@
+{
+  "_desc": "快速上架版 —— 适合铺货、试款。跳过深度竞品分析，文案用模板套，只做必要校验。",
+  "competitor_analysis": {
+    "depth": "basic",
+    "fetch_bullets": true,
+    "fetch_description": false,
+    "keyword_research": false
+  },
+  "copywriting": {
+    "mode": "template",
+    "title_source": "competitor_structure",
+    "bullets_source": "template_5",
+    "description_source": "template",
+    "compliance_check": true
+  },
+  "validation": {
+    "require_valid": true,
+    "block_on_warning": false
+  },
+  "images": {
+    "max_others": 6,
+    "verify_urls": true
+  },
+  "review_before_submit": false
+}
