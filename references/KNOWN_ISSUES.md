@@ -264,3 +264,48 @@ lark-cli base +record-batch-update --base-token <token> --table-id <tid> \
 **排查顺序**：本地 200 但 Amazon 报错 → 直接换图床，不要折腾图片格式。
 
 **补充**：PNG（980KB）在 imgbb 失败，转 JPG（166KB）同样失败 → 证明是图床问题不是格式问题。
+
+---
+
+## LI-014 · PT 特有字段名不能靠翻译猜
+**日期**：2026-10-22
+
+| PT | 想填的东西 | ❌ 错名 | ✅ 对名 |
+|---|---|---|---|
+| BUILDING_MATERIAL | 物品尺寸 | `item_height_width_length` | **`item_dimensions`** |
+| AUTO_ACCESSORY | 是否需要组装 | `required_assembly` | **`is_assembly_required`** |
+| BACKPACK | 产品长宽 | `item_length_width` | **`item_depth_width_height`** |
+| HARDWARE_HANDLE | 产品长宽 | —— | `item_length_width` |
+
+**规则**：报 `90220 xxx is required but missing` 时，**去 schema 的 properties 里 grep 关键词**（如 `grep assembl`），不要按中文翻译拼字段名。
+
+## LI-015 · 8560 产品信息不足，多半是 PT 选错
+**日期**：2026-10-22
+
+**现象**：
+```
+8560: Your product details aren't complete enough to find a matching ASIN or create a new one
+18367 WARNING: Having the most relevant product type...
+```
+
+**案例**：保温窗帘先用 `BUILDING_MATERIAL`（竞品的 PT），补全 required 后仍 8560；换 `HOME` 补了
+`part_number` / `required_product_compliance_certificate` / `generic_keyword` 后**还是 8560**。
+
+**结论**：
+- 竞品的 PT **不一定适合我们**（尤其是跨类目铺货）
+- 8560 + 18367 同时出现 → **PT 选型问题**，不是缺字段
+- 处理方式：去卖家后台手动查该品实际归属的 PT，或换 `HOME` / `HOME_FURNITURE_AND_DECOR` 试
+- **不要在这一步死磕**，标记「待人工确认 PT」跳过
+
+## LI-016 · 图片文件路径不能含中文
+**日期**：2026-10-22
+
+**现象**：
+```
+Unable to Retrieve Media Content for URL 'Media Not Found on Server (404)':
+https://raw.githubusercontent.com/.../ChatGPT_图像_2026年10月22日_11_01_34-6.jpg
+```
+
+**根因**：中文 + 空格路径即使 URL 编码，Amazon 侧也可能 404。
+
+**解法**：上传前**在本地把文件重命名为英文**（如 `z_1.jpg`），不要指望 URL 编码救场。
