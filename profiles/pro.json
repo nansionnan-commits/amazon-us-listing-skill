@@ -1,0 +1,31 @@
+{
+  "_desc": "精做版 —— 适合主推款。全量竞品拆解、关键词反查、差异化文案、严格校验、提交前人工确认。",
+  "competitor_analysis": {
+    "depth": "full",
+    "fetch_bullets": true,
+    "fetch_description": true,
+    "keyword_research": true,
+    "keyword_source": "linkfox:sif/asinKeywords",
+    "variant_matrix": true,
+    "price_band": true
+  },
+  "copywriting": {
+    "mode": "differentiated",
+    "title_versions": 3,
+    "bullets_strategy": "find_competitor_gaps",
+    "description_include_specs_table": true,
+    "compliance_check": true
+  },
+  "validation": {
+    "require_valid": true,
+    "block_on_warning": true,
+    "require_human_review": true
+  },
+  "images": {
+    "max_others": 8,
+    "verify_urls": true,
+    "check_white_bg": true,
+    "check_min_size": 1000
+  },
+  "review_before_submit": true
+}
