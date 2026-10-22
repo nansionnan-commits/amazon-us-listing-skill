@@ -198,3 +198,69 @@ GET /listings/2021-08-01/items/{sellerId}?marketplaceIds=US&pageSize=20&included
 | 品牌 | 张奥迪 US = `EAOEIHD`；其他站点/店铺 = `Generic` |
 | ASIN 生成时间 | 3~10 分钟 |
 | BUYABLE 时间 | ASIN 生成后 30~60 分钟（审核通过后）|
+
+---
+
+## LI-012 · 飞书 Base 作为输入源时的字段坑
+**日期**：2026-10-22
+
+### 坑 1：`--app-token` 是错参数
+正确是 `--base-token`。
+
+### 坑 2：`+record-list` 默认输出 ndjson 到文件
+不写 `--format json` 的话，stdout 只是 manifest 摘要，真数据在 `.ndjson` 文件里。
+
+### 坑 3：`--format json` 返回矩阵，列序不可信
+`data.data` 是数组的数组，但顺序**不等于** manifest `columns` 的顺序。必须按内容语义映射：
+
+| 位置 | 实际字段 | 典型值 |
+|---|---|---|
+| 0 | 日期 | `2026-10-22T00:00:00+08:00` |
+| 1 | 核心词/产品名 | `Unisex Lightweight Chest Bag` |
+| 2 | 附图+视频文件包 | 附件数组 |
+| 3 | 主图 | 附件数组 |
+| 4 | 空 | null |
+| 5 | 价格 | 截图附件 |
+| 6 | 备注 | 文本或 null |
+| 7 | 参考链接 | Amazon URL |
+| 8 | 姓名 | `[{id, name}]` |
+| 9 | SKU登记 | `QBB20261015106` |
+| 10 | 关键词 | 空格分隔 |
+
+### 坑 4：`+field-list` 返回 `data.fields` 不是 `data.items`
+
+### 坑 5：**上传后必须回填「上传了吗」**
+- 字段 `上传了吗`（select），选项 `已传` / `没有`
+- 不回填会导致下次重复上架
+- 命令见下方
+```bash
+lark-cli base +record-batch-update --base-token <token> --table-id <tid> \
+  --json '{"update_records":{"<record_id>":{"上传了吗":["已传"]}}}'
+```
+
+### 坑 6：老板本人的记录要跳过
+`姓名` 为 **杨梓杭**（openId `ou_d419c611863df62de469e69ebe5160cc`）的记录 = 已上传过，跳过。
+
+---
+
+## LI-013 · 图床：raw.githubusercontent.com 才是 Amazon 能拉的那个
+**日期**：2026-10-22　**严重度**：🔴 高（覆盖 LI-004 的结论）
+
+同一批图实测：
+
+| 图床 | 本地 check | Amazon 能否拉取 |
+|---|---|---|
+| `i.ibb.co` | ✅ 200 | ❌ `Unable to Download from Server`（当天传 14 张后失效，疑限流）|
+| `cdn.jsdelivr.net` | ✅ 200（偶发 34~50s） | ❌ 失败 |
+| **`raw.githubusercontent.com`** | ✅ 200 | ✅ **成功，status=VALID** |
+
+**结论**：
+```
+首选 https://raw.githubusercontent.com/{owner}/{repo}/main/{path}
+```
+- imgbb 作本地预览/备份，不保证 Amazon 能拉
+- jsDelivr 不要用于 listing 的 `media_location`
+
+**排查顺序**：本地 200 但 Amazon 报错 → 直接换图床，不要折腾图片格式。
+
+**补充**：PNG（980KB）在 imgbb 失败，转 JPG（166KB）同样失败 → 证明是图床问题不是格式问题。
