@@ -1,0 +1,20 @@
+{
+  "imgbb": {
+    "api_key": "REPLACE_WITH_YOUR_IMGBB_KEY",
+    "endpoint": "https://api.imgbb.com/1/upload",
+    "expiration": null
+  },
+  "github": {
+    "username": "your-github-username",
+    "repo": "listing-images",
+    "branch": "main",
+    "cdn_base": "https://cdn.jsdelivr.net/gh/{username}/{repo}@{branch}/",
+    "token_env": "GITHUB_TOKEN"
+  },
+  "default_provider": "imgbb",
+  "constraints": {
+    "amazon_min_long_side": 1000,
+    "amazon_main_image_bg": "RGB(255,255,255)",
+    "amazon_max_file_mb": 10
+  }
+}
