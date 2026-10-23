@@ -52,17 +52,17 @@ def build(p):
         "manufacturer": L(p.get("manufacturer", p["brand"])),
         "included_components": L(p.get("included_components",
                                      "1 x Motorcycle Passenger Grab Handle Belt")),
-        "handle": [{
+        **({"handle": [{
             "material": [{"language_tag": "en_US", "value": p.get("handle_material", "Plastic")}],
             "type": [{"language_tag": "en_US", "value": p.get("handle_type", "Molded Grip Handle")}],
             "marketplace_id": MP,
-        }],
-        # 产品实际长宽（单位只能是 inches）
-        "item_length_width": [{
+        }]} if p.get("handle_material") or p.get("handle_type") or p.get("product_type") == "HARDWARE_HANDLE" else {}),
+        # 产品实际长宽（有 item_lw 才加，单位只能是 inches）
+        **({"item_length_width": [{
             "length": {"value": p["item_lw"]["length"], "unit": "inches"},
             "width": {"value": p["item_lw"]["width"], "unit": "inches"},
             "marketplace_id": MP,
-        }],
+        }]} if p.get("item_lw") else {}),
         "color": L(p.get("color", "Black")),
         "size": L(p.get("size", "One Size")),
         "material": L(p.get("material", "Nylon")),
@@ -125,16 +125,44 @@ def build(p):
         "requirements": "LISTING",
         "attributes": attrs,
     }
+    # PT 特有字段直接注入（extra_attrs，用于各类 PT 的必填项）
+    for k, v in (p.get("extra_attrs") or {}).items():
+        attrs[k] = v
+
+    # 某些 PT 不认 item_length_width（改用自己的尺寸字段）
+    if p.get("drop_attrs"):
+        for k in p["drop_attrs"]:
+            attrs.pop(k, None)
+
+    # 父体不带价格 / 库存 / 图片
+    if p.get("_is_parent"):
+        for k in ["purchasable_offer", "list_price", "fulfillment_availability",
+                  "main_product_image_locator"]:
+            attrs.pop(k, None)
+        for k in [k for k in list(attrs) if k.startswith("other_product_image_locator_")]:
+            attrs.pop(k, None)
+
     return payload
 
 
-def submit(sku, payload, mode=None):
-    """mode=None 正式提交；mode=VALIDATION_PREVIEW 只校验"""
+def submit(sku, payload, mode=None, source=None):
+    """mode=None 正式提交；mode=VALIDATION_PREVIEW 只校验
+    source: base/erp/cross/manual —— 正式提交时做 SKU 归属检查，防止两条上架流程互相覆盖
+    """
+    _lg = None
+    if mode is None and source:
+        import listing_guard as _lg
+        _lg.claim(sku, source)          # 撞车会抛 SkuConflict
+
     qs = {"marketplaceIds": MP}
     if mode:
         qs["mode"] = mode
     path = f"/listings/2021-08-01/items/{auth.SELLER_ID}/{urllib.parse.quote(sku)}?{urllib.parse.urlencode(qs)}"
-    return auth.request("PUT", path, body=payload)
+    st, r = auth.request("PUT", path, body=payload)
+
+    if mode is None and source and st == 200 and r.get("status") == "ACCEPTED":
+        _lg.record(sku, source, status="ACCEPTED")
+    return st, r
 
 
 def main():
@@ -167,7 +195,13 @@ def main():
         return 0
 
     print("\n📤 正式提交...")
-    st, r = submit(p["sku"], payload)
+    try:
+        st, r = submit(p["sku"], payload, source=p.get("source", "base"))
+    except Exception as _e:
+        if _e.__class__.__name__ == "SkuConflict":
+            print(f"⛔ 拒绝提交：{_e}")
+            return 3
+        raise
     print(f"HTTP {st}")
     print(json.dumps(r, ensure_ascii=False, indent=1)[:3000])
     return 0
