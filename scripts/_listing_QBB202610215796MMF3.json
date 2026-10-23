@@ -1,0 +1,255 @@
+{
+ "productType": "PERSONAL_PILL_DISPENSER",
+ "requirements": "LISTING",
+ "attributes": {
+  "brand": [
+   {
+    "language_tag": "en_US",
+    "value": "EAOEIHD",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "item_name": [
+   {
+    "language_tag": "en_US",
+    "value": "Rotating 4-Compartment Pill Organizer, Twist-Open Medicine Dispenser with Detachable Inner Core, Portable Daily Pill Case for Vitamins and Supplements, Pink",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "bullet_point": [
+   {
+    "language_tag": "en_US",
+    "value": "【Four Compartments, No More Guessing】Each section holds a separate day or dose, so morning vitamins, afternoon supplements and evening medication never end up in the same pile. Twist the lid to the section you need and the contents come out one compartment at a time.",
+    "marketplace_id": "ATVPDKIKX0DER"
+   },
+   {
+    "language_tag": "en_US",
+    "value": "【Twist-Top With a Detachable Core】The inner core lifts straight out of the outer shell, which means you can refill all four sections at once instead of fighting with a single narrow opening. Push it back in and the lid rotates smoothly again.",
+    "marketplace_id": "ATVPDKIKX0DER"
+   },
+   {
+    "language_tag": "en_US",
+    "value": "【Pocket-Sized for Daily Carry】At roughly 6 x 6 cm it slips into a coat pocket, handbag or glovebox without bulging. The compact body keeps the compartments stacked in one piece, so nothing rattles loose in your bag.",
+    "marketplace_id": "ATVPDKIKX0DER"
+   },
+   {
+    "language_tag": "en_US",
+    "value": "【Snap-Shut Lid Keeps Contents In】The lid seats down firmly over the top opening. Pills stay put when the case is carried upright or on its side, and the flat base lets it stand on a bedside table without tipping.",
+    "marketplace_id": "ATVPDKIKX0DER"
+   },
+   {
+    "language_tag": "en_US",
+    "value": "【Simple to Clean Between Refills】The core and shell separate completely, so both parts rinse clean and dry quickly. No narrow corners to scrub - useful when switching between different supplements.",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "product_description": [
+   {
+    "language_tag": "en_US",
+    "value": "<p><strong>Sorting daily medication shouldn't mean a drawer full of loose bottles.</strong></p><p>This rotating pill organizer keeps four separate doses in one compact case. Turn the top to the section you need; the contents drop out through the opening while the other three stay closed.</p><p><strong>What makes it different</strong></p><ul><li><strong>Detachable inner core.</strong> The whole core lifts out so you can fill all four compartments at once, then drop it back in.</li><li><strong>One-piece rotating body.</strong> The compartments stay stacked together - nothing to lose or mix up.</li><li><strong>Compact footprint.</strong> About 6 x 6 cm, small enough for a pocket or handbag.</li><li><strong>Firm snap lid.</strong> Keeps contents in place when carried on its side.</li><li><strong>Easy to rinse.</strong> Core and shell separate completely for cleaning.</li></ul><p><strong>Specifications</strong></p><ul><li>Compartments: 4</li><li>Material: ABS plastic</li><li>Color: Pink</li><li>Size: approx. 6.1 x 6 x 6.9 cm (2.4 x 2.36 x 2.72 in)</li><li>Package weight: 0.06 kg</li><li>Package includes: 1 x Rotating 4-Compartment Pill Organizer</li></ul><p><strong>Before you buy</strong></p><p>This organizer holds solid pills, capsules and tablets. It is not waterproof and is not intended for liquids or temperature-sensitive medication. Check compartment capacity against the size of your pills.</p>",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "condition_type": [
+   {
+    "value": "new_new",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "country_of_origin": [
+   {
+    "value": "CN",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "supplier_declared_dg_hz_regulation": [
+   {
+    "value": "not_applicable",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "model_number": [
+   {
+    "value": "QBB20261021579",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "manufacturer": [
+   {
+    "language_tag": "en_US",
+    "value": "EAOEIHD",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "included_components": [
+   {
+    "language_tag": "en_US",
+    "value": "1 x Rotating 4-Compartment Pill Organizer",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "color": [
+   {
+    "language_tag": "en_US",
+    "value": "Pink",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "size": [
+   {
+    "language_tag": "en_US",
+    "value": "One Size",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "material": [
+   {
+    "language_tag": "en_US",
+    "value": "ABS",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "number_of_items": [
+   {
+    "value": 1,
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "main_product_image_locator": [
+   {
+    "media_location": "https://cbu01.alicdn.com/img/ibank/O1CN014PiRlS1QIqF1chua_!!2213954725617-0-cib.jpg",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "supplier_declared_has_product_identifier_exemption": [
+   {
+    "value": true,
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "purchasable_offer": [
+   {
+    "currency": "USD",
+    "audience": "ALL",
+    "our_price": [
+     {
+      "schedule": [
+       {
+        "value_with_tax": 16.99
+       }
+      ]
+     }
+    ],
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "list_price": [
+   {
+    "currency": "USD",
+    "value": 29.99,
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "fulfillment_availability": [
+   {
+    "fulfillment_channel_code": "DEFAULT",
+    "quantity": 199,
+    "lead_time_to_ship_max_days": 2
+   }
+  ],
+  "merchant_shipping_group": [
+   {
+    "value": "a08cfb00-f40d-4cbd-a231-51d5f48f37d9",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "item_package_dimensions": [
+   {
+    "length": {
+     "value": 6.1,
+     "unit": "centimeters"
+    },
+    "width": {
+     "value": 6,
+     "unit": "centimeters"
+    },
+    "height": {
+     "value": 6.9,
+     "unit": "centimeters"
+    },
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "item_package_weight": [
+   {
+    "value": 0.06,
+    "unit": "kilograms",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "item_package_quantity": [
+   {
+    "value": 1,
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "other_product_image_locator_1": [
+   {
+    "media_location": "https://cbu01.alicdn.com/img/ibank/O1CN017ykIoi8CSmG2vH2e_!!2213954725617-0-cib.jpg",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "other_product_image_locator_2": [
+   {
+    "media_location": "https://cbu01.alicdn.com/img/ibank/O1CN01vuJOk6B7WYD2vH2e_!!2213954725617-0-cib.jpg",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "other_product_image_locator_3": [
+   {
+    "media_location": "https://cbu01.alicdn.com/img/ibank/O1CN011OAu9O0bTlD2vH2e_!!2213954725617-0-cib.jpg",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "other_product_image_locator_4": [
+   {
+    "media_location": "https://cbu01.alicdn.com/img/ibank/O1CN01StscLJE4syK2vH2e_!!2213954725617-0-cib.jpg",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "unit_count": [
+   {
+    "value": 1,
+    "type": {
+     "language_tag": "en_US",
+     "value": "Count"
+    },
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "number_of_compartments": [
+   {
+    "value": 4,
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "container": [
+   {
+    "type": [
+     {
+      "language_tag": "en_US",
+      "value": "Daily Compartment Organizer"
+     }
+    ],
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ],
+  "special_feature": [
+   {
+    "language_tag": "en_US",
+    "value": "Rotating lid with detachable inner core; four separate compartments",
+    "marketplace_id": "ATVPDKIKX0DER"
+   }
+  ]
+ }
+}
