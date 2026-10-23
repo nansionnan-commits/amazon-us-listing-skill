@@ -35,6 +35,28 @@ ERP 通道要点（详见 `docs/erp-source.md`）：
 - 图片：alicdn 直接用；ERP 图要下载后传 imgbb
 - **同款不同规格必须合并成一个父体**（`COLOR/SIZE` 复合变体主题）——拆成多条独立链接会被 `100730` 拒
 
+### 两条通道互不覆盖（`scripts/listing_guard.py`）
+
+两条流程共用同一个卖家账号，**唯一风险是 SKU 撞车导致后提交覆盖前一条**。闸门在提交层：
+
+```python
+import listing_guard as _lg
+
+_lg.claim(sku, source="base")    # 或 "erp"、"cross"；跨流程撞车抛 SkuConflict
+# ... 提交 ...
+_lg.record(sku, "base", asin=..., price=...)   # 成功后回写台账
+```
+
+| 情况 | 行为 |
+|---|---|
+| 台账里没有该 SKU | 登记通过 |
+| 台账有，**同一 source** | 通过（自己更新自己） |
+| 台账有，**不同 source** | **拒绝提交**，提示被哪条流程占用 |
+
+台账文件：`config/sku_ledger.json`。强制接管要 `_lg.release(sku, confirm=True)`，且必须人工确认。
+
+**已自动接入**：`build_listing.py` 的 `submit()`（source 取自 product JSON 的 `source` 字段，默认 `base`）、`erp_listing.py` 的提交循环（固定 `erp`）。
+
 ---
 
 ## 执行流程（严格按顺序）
