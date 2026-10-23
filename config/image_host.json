@@ -1,0 +1,27 @@
+{
+  "_说明": "图片托管配置。default_provider 决定 upload 走哪条通道。",
+  "imgbb": {
+    "api_key": "128b58e8e65af2b55fdf22d78b910907",
+    "endpoint": "https://api.imgbb.com/1/upload",
+    "expiration": null
+  },
+  "github": {
+    "username": "nansionnan-commits",
+    "repo": "listing-images",
+    "branch": "main",
+    "cdn_base": "https://cdn.jsdelivr.net/gh/nansionnan-commits/listing-images@main/",
+    "token_env": "GITHUB_TOKEN"
+  },
+  "default_provider": "github",
+  "path_rule": {
+    "_warning": "仓库路径禁止中文/空格/特殊字符，否则 jsDelivr 必须 URL 编码，Amazon 侧存在解析风险",
+    "allowed": "小写字母、数字、连字符 -、下划线 _",
+    "example": "544-moto-belt/A1_main.jpg"
+  },
+  "constraints": {
+    "amazon_min_long_side": 1000,
+    "amazon_main_image_bg": "RGB(255,255,255)",
+    "amazon_max_file_mb": 10,
+    "amazon_formats": ["jpg", "jpeg", "png", "gif", "tif", "tiff"]
+  }
+}
