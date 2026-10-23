@@ -15,9 +15,25 @@ description: 亚马逊美国站新品自动上架（竞品逆向 → 差异化�
 | 触发场景 | 示例 |
 |---|---|
 | ✅ **用** | "给 B0XXXX 这个竞品开个新品"、"上架这个摩托腰带"、"照这个做一个" |
+| ✅ **用（ERP 数据源）** | "从 ERP 挑品上架"、"按 ERP 已完成的产品上架" → 见 `docs/erp-source.md` |
 | ❌ **不用** | 跟卖（用 Sell on Amazon）、跨站复制（用 `amazon-us-to-ca/au/mx-listing`）、改已有 listing |
 
 **只做美国站。** CA/AU/MX 由 `amazon-us-to-*-listing` 三个定时任务自动复制，不要在这里做。
+
+---
+
+## 两条数据源通道
+
+| 数据源 | 入口 | 说明 |
+|---|---|---|
+| 老板给竞品 ASIN + 图片目录 | `scripts/build_listing.py` | 主流程，手工收集输入 |
+| **公司 ERP（兰谷）批量选品** | `scripts/erp_listing.py` + `docs/erp-source.md` | 自动抓数据 / 算价 / 图片转换 |
+
+ERP 通道要点（详见 `docs/erp-source.md`）：
+- 只做 `productStatus=5`（已完成）；判状态前先调 `statisticsCount` 对账，别猜
+- 售价必须 **≥ $20**（`calc_price.py` 云途美国 50% 利润率 + 向上取 .99）；不够就做多件装 `--pc 2`
+- 图片：alicdn 直接用；ERP 图要下载后传 imgbb
+- **同款不同规格必须合并成一个父体**（`COLOR/SIZE` 复合变体主题）——拆成多条独立链接会被 `100730` 拒
 
 ---
 
