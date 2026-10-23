@@ -145,14 +145,15 @@ def build(p):
     return payload
 
 
-def submit(sku, payload, mode=None, source=None):
+def submit(sku, payload, mode=None, source=None, force=False):
     """mode=None 正式提交；mode=VALIDATION_PREVIEW 只校验
-    source: base/erp/cross/manual —— 正式提交时做 SKU 归属检查，防止两条上架流程互相覆盖
+    source: base/erp/cross/manual —— 只用于记录来源
+    force : 该 SKU 已上架过时，显式允许覆盖（默认拒绝，防重复上架）
     """
     _lg = None
     if mode is None and source:
         import listing_guard as _lg
-        _lg.claim(sku, source)          # 撞车会抛 SkuConflict
+        _lg.claim(sku, source, force=force)   # 已存在会抛 SkuConflict
 
     qs = {"marketplaceIds": MP}
     if mode:
@@ -171,6 +172,7 @@ def main():
     ap.add_argument("--out", default=None)
     ap.add_argument("--validate", action="store_true", help="VALIDATION_PREVIEW 校验，不创建")
     ap.add_argument("--submit", action="store_true", help="正式提交")
+    ap.add_argument("--force", action="store_true", help="SKU 已上架过时强制覆盖（默认拒绝）")
     args = ap.parse_args()
 
     p = json.load(open(args.input, encoding="utf-8"))
@@ -196,7 +198,7 @@ def main():
 
     print("\n📤 正式提交...")
     try:
-        st, r = submit(p["sku"], payload, source=p.get("source", "base"))
+        st, r = submit(p["sku"], payload, source=p.get("source", "base"), force=args.force)
     except Exception as _e:
         if _e.__class__.__name__ == "SkuConflict":
             print(f"⛔ 拒绝提交：{_e}")
