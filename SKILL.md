@@ -37,25 +37,38 @@ ERP 通道要点（详见 `docs/erp-source.md`）：
 
 ### 两条通道互不覆盖（`scripts/listing_guard.py`）
 
-两条流程共用同一个卖家账号，**唯一风险是 SKU 撞车导致后提交覆盖前一条**。闸门在提交层：
+**⚠️ 前提：SKU 是通用的 —— 两条通道的 SKU 都来自 ERP，同一个 SKU 就是同一个产品。**
+
+所以防覆盖的判断**不看是哪条流程**，只看**这个 SKU 是否已经上过**：
 
 ```python
 import listing_guard as _lg
 
-_lg.claim(sku, source="base")    # 或 "erp"、"cross"；跨流程撞车抛 SkuConflict
+_lg.claim(sku, source="base")    # 已上架过 → 抛 SkuConflict，拒绝重复提交
 # ... 提交 ...
 _lg.record(sku, "base", asin=..., price=...)   # 成功后回写台账
 ```
 
 | 情况 | 行为 |
 |---|---|
-| 台账里没有该 SKU | 登记通过 |
-| 台账有，**同一 source** | 通过（自己更新自己） |
-| 台账有，**不同 source** | **拒绝提交**，提示被哪条流程占用 |
+| 台账里没有该 SKU | 通过（首次上架） |
+| 台账里有，**没加 --force** | **拒绝**（重复提交会覆盖现有 listing） |
+| 台账里有，**加了 --force** | 通过（显式更新，需人工确认是同一个产品） |
 
-台账文件：`config/sku_ledger.json`。强制接管要 `_lg.release(sku, confirm=True)`，且必须人工确认。
+`source` 只用于记录「这次是谁上的」，**不参与放行判断**。
+台账文件：`config/sku_ledger.json`。强制接管要 `_lg.release(sku, confirm=True)`。
 
-**已自动接入**：`build_listing.py` 的 `submit()`（source 取自 product JSON 的 `source` 字段，默认 `base`）、`erp_listing.py` 的提交循环（固定 `erp`）。
+**已自动接入**：`build_listing.py` 的 `submit()`（source 默认 `base`）、`erp_listing.py` 的提交循环（固定 `erp`）。两边都有 `--force` 开关。
+
+### 🔴 SKU 铁律：必须用 ERP 编码，不许自己编
+
+| ✅ 正确 | ❌ 错误 |
+|---|---|
+| 取飞书表「SKU登记」字段（`WCA20261019102` / `ZMJ20261015195` / `ZYY20261020510`）| 自己拼 `WBXZ-261022-XXX` |
+| 取 ERP SPU 的 `skuCode` | 用日期+品类临时造 |
+| **字段为空 → 问老板要，或跳过这个品** | 空着就自己编一个 |
+
+**格式**：3 位品类码 + 8 位日期 + 3 位序号（如 `WCA20261017114`）。
 
 ---
 
