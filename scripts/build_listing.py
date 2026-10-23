@@ -109,6 +109,15 @@ def build(p):
     for i, url in enumerate(p["images"].get("others", [])[:8], 1):
         attrs[f"other_product_image_locator_{i}"] = [{"media_location": url, "marketplace_id": MP}]
 
+    # 通用扩展：排除当前 PT 不适用的字段（会把 90000900 WARNING 消掉）
+    for k in p.get("exclude_attributes", []):
+        attrs.pop(k, None)
+
+    # 通用扩展：补当前 PT 特有的必填字段（如 number_of_compartments / container）
+    extra = p.get("extra_attributes") or {}
+    for k, v in extra.items():
+        attrs[k] = v
+
     # 单款：不设 parentage_level / variation_theme / child_parent_sku_relationship
 
     payload = {
