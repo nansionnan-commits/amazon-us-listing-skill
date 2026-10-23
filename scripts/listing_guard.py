@@ -55,25 +55,30 @@ def _save(d):
     os.replace(tmp, LEDGER)
 
 
-def claim(sku, source, allow_same=True):
+def claim(sku, source, force=False):
     """
-    提交前登记。撞车规则：
-      - 台账里没有 → 登记通过
-      - 台账里有，且 source 相同 → 通过（同流程重跑/更新自己）
-      - 台账里有，但 source 不同 → 抛 SkuConflict（除非 allow_same=False 或先 release）
+    提交前登记。
+
+    ⚠️ SKU 是通用的（都来自 ERP），同一个 SKU 就是一个产品。
+    所以撞车规则不看「哪条流程」，只看「这个 SKU 是否已经上过」：
+
+      - 台账里没有                → 通过（首次上架）
+      - 台账里有，force=False     → 抛 SkuConflict（拒绝重复上架 = 拒绝覆盖）
+      - 台账里有，force=True      → 通过（显式更新，需人工确认后加 --force）
+
+    source 只用于记录「这次是谁上的」，不参与放行判断。
     """
     if source not in SOURCES:
         raise ValueError(f"source 必须是 {list(SOURCES)}，收到 {source}")
     with _LOCK:
         d = _load()
         rec = d["skus"].get(sku)
-        if rec and rec.get("source") != source:
-            if allow_same:
-                raise SkuConflict(
-                    f"SKU {sku} 已被【{SOURCES.get(rec['source'], rec['source'])}】占用"
-                    f"（{rec.get('created_at', '?')} / ASIN {rec.get('asin', '待分配')}）。"
-                    f"如确需接管，先调用 listing_guard.release('{sku}', confirm=True)。"
-                )
+        if rec and not force:
+            raise SkuConflict(
+                f"SKU {sku} 已经上架过（来源【{SOURCES.get(rec['source'], rec['source'])}】"
+                f" / ASIN {rec.get('asin') or '待分配'} / 首次 {rec.get('created_at', '?')}）。"
+                f"重复提交会覆盖现有 listing。确需更新请加 --force（并确认是同一个产品）。"
+            )
         d["skus"][sku] = {
             **({"created_at": rec["created_at"]} if rec else {"created_at": time.strftime("%Y-%m-%d %H:%M:%S")}),
             "source": source,
