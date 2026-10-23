@@ -1,4 +1,181 @@
 {
  "_desc": "SKU 归属台账：防止不同上架流程互相覆盖",
- "skus": {}
+ "skus": {
+  "WCA20261019102": {
+   "created_at": "2026-10-23 11:39:10",
+   "source": "base",
+   "asin": "B0HNWP16MV",
+   "price": 14.0,
+   "updated_at": "2026-10-23 11:39:10",
+   "status": "ACCEPTED"
+  },
+  "ZMJ20261015195": {
+   "created_at": "2026-10-23 11:39:10",
+   "source": "base",
+   "asin": "B0HNWJDG33",
+   "price": 39.0,
+   "updated_at": "2026-10-23 11:39:10",
+   "status": "ACCEPTED"
+  },
+  "ZYY20261020510": {
+   "created_at": "2026-10-23 11:39:10",
+   "source": "base",
+   "asin": "B0HNWLWZFX",
+   "price": 17.0,
+   "updated_at": "2026-10-23 11:39:10",
+   "status": "ACCEPTED"
+  },
+  "WBXZ-261022-FCC": {
+   "created_at": "2026-10-23 11:39:10",
+   "source": "base",
+   "asin": "B0HNWGV98Y",
+   "price": 9.99,
+   "updated_at": "2026-10-23 11:39:10",
+   "status": "ACCEPTED"
+  },
+  "WBXZ-261022-FNL": {
+   "created_at": "2026-10-23 11:39:10",
+   "source": "base",
+   "asin": "B0HNWFN37M",
+   "price": 9.99,
+   "updated_at": "2026-10-23 11:39:10",
+   "status": "ACCEPTED"
+  },
+  "WBXZ-261022-LHP": {
+   "created_at": "2026-10-23 11:39:10",
+   "source": "base",
+   "asin": "B0HNWFB1V7",
+   "price": 48.0,
+   "updated_at": "2026-10-23 11:39:10",
+   "status": "ACCEPTED"
+  },
+  "WBXZ-261022-LMN": {
+   "created_at": "2026-10-23 11:39:10",
+   "source": "base",
+   "asin": "B0HNWMF3VM",
+   "price": 9.0,
+   "updated_at": "2026-10-23 11:39:10",
+   "status": "ACCEPTED"
+  },
+  "WBXZ-261022-WMT": {
+   "created_at": "2026-10-23 11:39:10",
+   "source": "base",
+   "asin": "B0HNWRJGDW",
+   "price": 34.0,
+   "updated_at": "2026-10-23 11:39:10",
+   "status": "ACCEPTED"
+  },
+  "WBXZ-261022-FCT": {
+   "created_at": "2026-10-23 11:39:10",
+   "source": "base",
+   "asin": "B0HNWRQ9BQ",
+   "price": 6.01,
+   "updated_at": "2026-10-23 11:39:10",
+   "status": "ACCEPTED"
+  },
+  "WBXZ-261023-SKR": {
+   "created_at": "2026-10-23 11:39:10",
+   "source": "base",
+   "asin": "B0HNWW48YN",
+   "price": 16.99,
+   "updated_at": "2026-10-23 11:39:10",
+   "status": "ACCEPTED"
+  },
+  "WBXZ-261023-CAK": {
+   "created_at": "2026-10-23 11:39:10",
+   "source": "base",
+   "asin": "B0HNXG1BTW",
+   "price": 13.99,
+   "updated_at": "2026-10-23 11:39:10",
+   "status": "ACCEPTED"
+  },
+  "WBXZ-261023-GCP": {
+   "created_at": "2026-10-23 11:39:10",
+   "source": "base",
+   "asin": "B0HNX6YW6H",
+   "price": 14.0,
+   "updated_at": "2026-10-23 11:39:10",
+   "status": "ACCEPTED"
+  },
+  "WBXZ-261023-DHS": {
+   "created_at": "2026-10-23 11:39:10",
+   "source": "base",
+   "asin": "B0HNX3K9CJ",
+   "price": 23.0,
+   "updated_at": "2026-10-23 11:39:10",
+   "status": "ACCEPTED"
+  },
+  "WBXZ-261023-HGL": {
+   "created_at": "2026-10-23 11:39:10",
+   "source": "base",
+   "asin": "B0HNX62KXF",
+   "price": 40.0,
+   "updated_at": "2026-10-23 11:39:10",
+   "status": "ACCEPTED"
+  },
+  "WBXZ-261023-CTB": {
+   "created_at": "2026-10-23 11:39:10",
+   "source": "base",
+   "asin": "B0HNX3HHTR",
+   "price": 24.0,
+   "updated_at": "2026-10-23 11:39:10",
+   "status": "ACCEPTED"
+  },
+  "WBXZ-261023-OSP": {
+   "created_at": "2026-10-23 11:39:10",
+   "source": "base",
+   "asin": "B0HNX3WMPG",
+   "price": 24.0,
+   "updated_at": "2026-10-23 11:39:10",
+   "status": "ACCEPTED"
+  },
+  "WBXZ-261023-LJZ": {
+   "created_at": "2026-10-23 11:39:10",
+   "source": "base",
+   "asin": "B0HNX3G6VV",
+   "price": 9.0,
+   "updated_at": "2026-10-23 11:39:10",
+   "status": "ACCEPTED"
+  },
+  "WBXZ-261023-URK": {
+   "created_at": "2026-10-23 11:39:10",
+   "source": "base",
+   "asin": "B0HNXBCQTK",
+   "price": 20.0,
+   "updated_at": "2026-10-23 11:39:10",
+   "status": "ACCEPTED"
+  },
+  "WBXZ-261023-BMG": {
+   "created_at": "2026-10-23 11:39:10",
+   "source": "base",
+   "asin": "B0HNX4VBNP",
+   "price": 9.0,
+   "updated_at": "2026-10-23 11:39:10",
+   "status": "ACCEPTED"
+  },
+  "WBXZ-261022-FUR-PARENT": {
+   "created_at": "2026-10-23 11:39:10",
+   "source": "base",
+   "asin": "B0HNWCGPCW",
+   "price": null,
+   "updated_at": "2026-10-23 11:39:10",
+   "status": "ACCEPTED"
+  },
+  "WBXZ-261022-FUR-1PC": {
+   "created_at": "2026-10-23 11:39:10",
+   "source": "base",
+   "asin": "B0HNWD3BVK",
+   "price": 19.99,
+   "updated_at": "2026-10-23 11:39:10",
+   "status": "ACCEPTED"
+  },
+  "WBXZ-261022-FUR-2PC": {
+   "created_at": "2026-10-23 11:39:10",
+   "source": "base",
+   "asin": "B0HNWR4PVT",
+   "price": 29.99,
+   "updated_at": "2026-10-23 11:39:10",
+   "status": "ACCEPTED"
+  }
+ }
 }
