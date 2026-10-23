@@ -187,6 +187,7 @@ def main():
     ap.add_argument("--parent-sku", default=None)
     ap.add_argument("--validate", action="store_true")
     ap.add_argument("--submit", action="store_true")
+    ap.add_argument("--force", action="store_true", help="SKU 已上架过时强制覆盖（默认拒绝）")
     ap.add_argument("--pc", type=int, default=1, help="多件装数量（不足 $20 时用）")
     a = ap.parse_args()
 
@@ -214,7 +215,7 @@ def main():
         print(f"\n[{label}] SKU={sku} attrs={len(payload['attributes'])}")
         if a.submit:
             try:
-                _lg.claim(sku, "erp")       # 与多维表格流程互斥
+                _lg.claim(sku, "erp", force=a.force)   # SKU 通用：已上过就拒绝
             except _lg.SkuConflict as _e:
                 print(f"  ⛔ 跳过（撞车）：{_e}")
                 continue
