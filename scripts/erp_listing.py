@@ -209,10 +209,19 @@ def main():
 
     tasks, variants = build(spu, a.pt, price, parent_sku)
     auth.set_store("zhangaodi")
+    import listing_guard as _lg
     for sku, payload, label in tasks:
         print(f"\n[{label}] SKU={sku} attrs={len(payload['attributes'])}")
+        if a.submit:
+            try:
+                _lg.claim(sku, "erp")       # 与多维表格流程互斥
+            except _lg.SkuConflict as _e:
+                print(f"  ⛔ 跳过（撞车）：{_e}")
+                continue
         qs = f"marketplaceIds={MP}" + ("&mode=VALIDATION_PREVIEW" if not a.submit else "")
         st, r = auth.request("PUT", f"/listings/2021-08-01/items/{auth.SELLER_ID}/{urllib.parse.quote(sku)}?{qs}", payload)
+        if a.submit and r.get("status") == "ACCEPTED":
+            _lg.record(sku, "erp", status="ACCEPTED")
         status = r.get("status")
         print(f"  HTTP {st} status={status}")
         if status is None:
